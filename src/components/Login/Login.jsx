@@ -1,4 +1,11 @@
-import { Button, Container, Input, VStack } from '@chakra-ui/react'
+import {
+  Button,
+  Container,
+  HStack,
+  Input,
+  Text,
+  VStack
+} from '@chakra-ui/react'
 import axios from 'axios'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -92,6 +99,14 @@ export default function Login () {
               Ingresar
             </Button>
           </VStack>
+          <HStack mt={4}>
+            <Text fontSize='sm' fontWeight='normal'>
+              Test account: <span> challenge@alkemy.org </span>
+            </Text>
+            <Text fontSize='sm' fontWeight='normal'>
+              Test password: <span> react </span>
+            </Text>
+          </HStack>
         </form>
       </Container>
     </div>
