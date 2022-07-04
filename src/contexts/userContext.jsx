@@ -4,7 +4,9 @@ const userContext = createContext()
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(() =>
-    JSON.parse(localStorage.getItem('user'))
+    JSON.parse(localStorage.getItem('user'))?.favorites
+      ? JSON.parse(localStorage.getItem('user'))
+      : null
   )
   const [token, setToken] = useState(() => localStorage.getItem('token'))
 
