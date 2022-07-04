@@ -24,14 +24,55 @@ function App () {
         <Header />
         <Routes>
           <Route path='/login' element={<Login />} />
-          <Auth>
-            <Route path='/' element={<Home />} />
-            <Route path='/movies' element={<AllMovies />} />
-            <Route path='/movies/:page' element={<AllMovies />} />
-            <Route path='/search' element={<Results />} />
-            <Route path='/movie/:id' element={<Detail />} />
-            <Route path='/favorites' element={<Favorites />} />
-          </Auth>
+
+          <Route
+            path='/'
+            element={
+              <Auth>
+                <Home />
+              </Auth>
+            }
+          />
+          <Route
+            path='/movies'
+            element={
+              <Auth>
+                <AllMovies />
+              </Auth>
+            }
+          />
+          <Route
+            path='/movies/:page'
+            element={
+              <Auth>
+                <AllMovies />
+              </Auth>
+            }
+          />
+          <Route
+            path='/search'
+            element={
+              <Auth>
+                <Results />{' '}
+              </Auth>
+            }
+          />
+          <Route
+            path='/movie/:id'
+            element={
+              <Auth>
+                <Detail />
+              </Auth>
+            }
+          />
+          <Route
+            path='/favorites'
+            element={
+              <Auth>
+                <Favorites />
+              </Auth>
+            }
+          />
         </Routes>
       </Box>
     </UserProvider>
