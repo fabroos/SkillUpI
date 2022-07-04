@@ -9,7 +9,7 @@ import './styles.css'
 import { Detail } from './components/Detail/Detail'
 import { Home } from './components/Home/Home'
 import AllMovies from './components/AllMovies/AllMovies'
-import { Results } from './components/results/Results'
+import { Results } from './components/Results/Results'
 import { Favorites } from './components/Favorites/Favorites'
 import { useContext } from 'react'
 const Auth = ({ children }) => {

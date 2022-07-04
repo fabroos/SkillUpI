@@ -1,13 +1,5 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Icon,
-  Image,
-  Skeleton,
-  VStack
-} from '@chakra-ui/react'
-import React, { useContext, useEffect, useState } from 'react'
+import { Box, Heading, Icon, Image, Skeleton, VStack } from '@chakra-ui/react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MdStar } from 'react-icons/md'
 import { userContext } from '../../contexts/userContext'
