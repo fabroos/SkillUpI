@@ -52,7 +52,7 @@ export default function Login () {
         icon: 'success',
         button: 'Ok'
       })
-      redirect('/listado')
+      redirect('/')
     } else {
       swalError('Las credenciales no son correctas')
     }
