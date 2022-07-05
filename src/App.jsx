@@ -14,7 +14,7 @@ import { Favorites } from './components/Favorites/Favorites'
 import { useContext } from 'react'
 const Auth = ({ children }) => {
   const { user } = useContext(userContext)
-  console.log(user)
+
   return user ? children : <Navigate to='/login' />
 }
 function App () {

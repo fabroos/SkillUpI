@@ -1,4 +1,5 @@
 import { Box, Heading } from '@chakra-ui/react'
+import swal from '@sweetalert/with-react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { apiKey } from '../../api'
@@ -25,7 +26,7 @@ export function Home () {
         })
       })
       .catch(err => {
-        console.log(err)
+        swal('Error', err.message, 'error')
       })
   }, [])
 

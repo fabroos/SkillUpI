@@ -44,7 +44,7 @@ export function Detail () {
         setIsLoading(false)
       })
   }, [id])
-  console.log(movie)
+
   return (
     <Box>
       {!isLoading && (

@@ -5,7 +5,7 @@ import MoviesList from '../MoviesList/MoviesList'
 
 export const Favorites = () => {
   const { user } = useContext(userContext)
-  console.log(user)
+
   return (
     <>
       <Heading pt={24} pb={12} px={12}>
