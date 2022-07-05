@@ -43,25 +43,19 @@ export default function Login () {
       return swalError('La contraseña no es valida')
     }
     // email !== 'challenge@alkemy.org' || password !== 'react'
-    axios
-      .post('http://challenge-react.alkemy.org', {
-        email,
-        password
+    if (email === 'challenge@alkemy.org' && password === 'react') {
+      // set token in localStorage
+      login('token')
+      swal({
+        title: 'Bienvenido',
+        text: 'Has iniciado sesion correctamente',
+        icon: 'success',
+        button: 'Ok'
       })
-      .then(res => {
-        // set token in localStorage
-        login(res.data.token)
-        swal({
-          title: 'Bienvenido',
-          text: 'Has iniciado sesion correctamente',
-          icon: 'success',
-          button: 'Ok'
-        })
-        redirect('/listado')
-      })
-      .catch(() => {
-        swalError('Las credenciales no son correctas')
-      })
+      redirect('/listado')
+    } else {
+      swalError('Las credenciales no son correctas')
+    }
   }
 
   return (
